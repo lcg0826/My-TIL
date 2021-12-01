@@ -35,6 +35,10 @@ request.open('GET', 'url 값 입력', true);
     방식 : GET or POST
     URL : url 주소 , ex) 'api/v1/main'
     동기/비동기 : true면 비동기, false면 동기
+
+    12.01 추가
+    만약, false를 사용하면 Ajax를 사용하지 않겠다는 의미로
+    false로 요청하게 되면 서버에서 응답이 오기 전까지 화면에서 다른 행동은 불가능하다.
 ```
 
 > request 전송, 준비된 요청을 서버에 전달
@@ -49,9 +53,11 @@ request.send();
 ```
 `send()` : 
     open()에 작성된 Ajax를 서버로 요청
+    GET 방식을 이용 하는 경우 send() 로 요청
+    POST 방식을 이용 하는 경우 send('추가데이터') 로 요청
 ```
 
-> 요청을 send() 후 응답
+> 요청을 send() 후 서버로부터 응답 확인
 ```
-
+ 
 ```
