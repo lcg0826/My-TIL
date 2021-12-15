@@ -27,3 +27,78 @@
     };
     '''
     
+## 프로퍼티 접근 방법
+
+1. 객체명.프로퍼티키
+2. 객체명['프로퍼티키']
+
+- 위에서 생성한 std 객체를 예시로
+    ```
+    console.log(std.std_num) -> 1
+    console.log(std.name) -> 홍길동
+    console.log(std.std_grade) -> 1
+    ```
+    
+### 프로퍼티 추가 생성 / 수정 / 삭제 
+
+- 생성
+    ```
+    var std = {
+        std_num : 1,
+        name : '홍길동',
+        std_grade : 1,
+        std_grade_add : function() {
+            this.std_grade++;
+        }
+    };
+    
+    std.name = '김아무개';
+    ```
+    
+    ```
+    console.log(std.name); -> '김아무개'
+    ```
+    
+- 수정
+    ```
+    var std = {
+        std_num : 1,
+        name : '김아무개',
+        std_grade : 1,
+        std_grade_add : function() {
+            this.std_grade++;
+        }
+    };
+    
+    std.tel = '010-1234-5678';    
+    ```
+    
+    ```
+    console.log(std.tel) -> '010-1234-5678;
+    ```
+    
+- 삭제
+    ```
+    var std = {
+        std_num : 1,
+        name : '김아무개',
+        std_grade : 1,
+        tel : '010-1234-5678',
+        std_grade_add : function() {
+            this.std_grade++;
+        }
+    };
+    
+    delete std.tel;
+    ```
+    
+    ```
+    var std = {
+        std_num : 1,
+        name : '김아무개',
+        std_grade : 1,
+        std_grade_add : function() {
+            this.std_grade++;
+        }
+    };
+    ```
